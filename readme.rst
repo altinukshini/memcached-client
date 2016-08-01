@@ -1,12 +1,16 @@
 ..  -*- mode: rst -*-
 ..  -*- coding: utf-8 -*-
 
-# Using this class
+===========================================================================
+Using this class
+===========================================================================
 
 I'm using this class for development use in laravel 5 on windows machine.
 This class simulates the real memcached php extension in windows which actually doesn't exist yet (php_memcached.dll).
 
-## Configuration
+===========================================================================
+Configuration in Windows machine
+===========================================================================
 
 Before you do anything else, make sure you have **memcached server** installed. Here's a blog that shows how to do that (follow setp A): https://commaster.net/content/installing-memcached-windows
 
