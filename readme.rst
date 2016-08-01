@@ -16,7 +16,7 @@ Before you do anything else, make sure you have **memcached server** installed. 
 
 Assuming you have memcached server isntalled, proceed with the following.
 
-Place **memcached.php** file in **C:\xampp\php\pear** folder
+Place **memcached.php** file in **C:\\xampp\\php\\pear** folder
 
 In your laravel 5 installation, edit **AppServiceProvider.php** and place the code below inside the boot() method.
 
