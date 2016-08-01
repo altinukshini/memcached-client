@@ -28,7 +28,7 @@ In your laravel 5 installation, edit **AppServiceProvider.php** and place the co
     }
 
 
-so it should looks something like:
+so it should look something like:
 
 
 ::
@@ -39,6 +39,8 @@ so it should looks something like:
             include ("memcached.php");
         }
     }
+
+...you should be good to go!
 
 
 ===========================================================================
