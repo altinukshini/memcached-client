@@ -554,15 +554,15 @@ class Memcached
 
     // I added this method since this method was missing in this class
     // and is used in laravel.
-    public function flush($delay = 0) // Fake delay parameter
+    public function flush($delay = 0)
     {
-        $this->writeSocket("flush_all");
+        $this->writeSocket("flush_all $delay");
 
         $s = $this->readSocket();
-        if ('DELETED' == $s) {
+        if ('OK' == $s) {
             $this->resultCode = Memcached::RES_SUCCESS;
             $this->resultMessage = '';
-            return true;
+            return false;
 
         } else {
             $this->resultCode = Memcached::RES_NOTFOUND;
