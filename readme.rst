@@ -1,6 +1,8 @@
 ..  -*- mode: rst -*-
 ..  -*- coding: utf-8 -*-
 
+I'm using this class for development use in laravel 5 on windows machine.
+This class simulates the real memcached php extension in windows which actually doesn't exist yet (php_memcached.dll).
 
 ===========================================================================
 PHP Memcached Client (simulator)
@@ -41,7 +43,8 @@ Supported method:
 -   set
 -   setOption
 -   setOptions
-
+-   getVersion
+-   flush
 
 Need disable memcached extension of PHP to run PHPUnit testcase.
 
