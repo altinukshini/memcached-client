@@ -16,22 +16,26 @@ Place **memcached.php** file in **C:\xampp\php\pear** folder
 
 In your laravel 5 installation, edit **AppServiceProvider.php** and place the code below inside the boot() method.
 
-```
-if (!class_exists('Memcached')) {
-    include ("memcached.php");
-}
-```
 
-so it should looks something like:
+::
 
-```
-public function boot(Kernel $kernel)
-{
     if (!class_exists('Memcached')) {
         include ("memcached.php");
     }
-}
-```
+
+
+so it should looks something like:
+
+
+::
+
+    public function boot(Kernel $kernel)
+    {
+        if (!class_exists('Memcached')) {
+            include ("memcached.php");
+        }
+    }
+
 
 ===========================================================================
 PHP Memcached Client (simulator)
