@@ -537,4 +537,37 @@ class Memcached
 
         return true;
     }
+    
+    
+    /*
+    |----------------------------------------------------------------
+    |   CUSTOM METHODS
+    |----------------------------------------------------------------
+    |
+    */
+
+    // This is all what MemcachedConnector looks for in Laravel
+    public function getVersion()
+    {
+        return ['1.2.0', '255.255.255'];
+    }
+
+    // I added this method since this method was missing in this class
+    // and is used in laravel.
+    public function flush(int $delay = 0) // Fake delay parameter
+    {
+        $this->writeSocket("flush_all");
+
+        $s = $this->readSocket();
+        if ('DELETED' == $s) {
+            $this->resultCode = Memcached::RES_SUCCESS;
+            $this->resultMessage = '';
+            return true;
+
+        } else {
+            $this->resultCode = Memcached::RES_NOTFOUND;
+            $this->resultMessage = 'Flush failed.';
+            return false;
+        }
+    }
 }
