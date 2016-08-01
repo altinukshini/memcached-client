@@ -554,7 +554,7 @@ class Memcached
 
     // I added this method since this method was missing in this class
     // and is used in laravel.
-    public function flush(int $delay = 0) // Fake delay parameter
+    public function flush($delay = 0) // Fake delay parameter
     {
         $this->writeSocket("flush_all");
 
